@@ -22,7 +22,7 @@
   "license": "WTFPL",
   "dependencies": {
     "express": "^4.17.3",
-    "mongodb": "^4.4.1"
+    "pg": "^8.7.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
