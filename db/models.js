@@ -1,19 +1,17 @@
 const Sequelize = require('sequelize')
+const {sequelize} = require('./sequelize.js')
 
-const timerModelAttr = {
+class Timer extends Sequelize.Model {}
+Timer.init({
   name: {type: Sequelize.STRING},
   timeLeft: {type: Sequelize.INTEGER},
   started: {type: Sequelize.STRING},
   stopped: {type: Sequelize.STRING}
-}
+}, {
+  sequelize,
+  modelName: 'timers'
+})
 
 module.exports = {
-  init: (sequelize) => {
-    class Timer extends Sequelize.Model {}
-    Timer.init(timerModelAttr, {
-      sequelize,
-      modelName: 'timers'
-    })
-    return {Timer}
-  }
+  Timer
 }
