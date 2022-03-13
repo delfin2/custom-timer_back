@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const db = require('./db.js')
+const db = require('./db/db.js')
 
 ;(async () => {
   console.log('db.connect start')
