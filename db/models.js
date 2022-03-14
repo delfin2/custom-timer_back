@@ -13,5 +13,6 @@ Timer.init({
 })
 
 module.exports = {
+  sequelize,
   Timer
 }

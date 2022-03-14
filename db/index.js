@@ -1,6 +1,5 @@
 
-const {sequelize} = require('./sequelize.js')
-const {Timer} = require('./models')
+const {sequelize, Timer} = require('./models.js')
 
 module.exports = {
   init: async () => {
