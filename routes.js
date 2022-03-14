@@ -31,7 +31,7 @@ router.put('/timers/:id', async (req, res) => {
 router.delete('/timers/:id', async (req, res) => {
   const target = await model.Timer.findByPk(req.params.id)
   await target.destroy()
-  res.send(target)
+  res.send(await model.Timers.findAll())
 })
 
 module.exports = router
