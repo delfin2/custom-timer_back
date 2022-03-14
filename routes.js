@@ -18,8 +18,8 @@ router.get('/timers', async (req, res) => {
 })
 
 router.post('/timers', async (req, res) => {
-  const timer = await model.Timer.create(req.body)
-  res.send(timer)
+  await model.Timer.create(req.body)
+  res.send(await model.Timer.findAll())
 })
 
 router.put('/timers/:id', async (req, res) => {
