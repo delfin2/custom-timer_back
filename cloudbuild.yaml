@@ -1,0 +1,7 @@
+steps:
+- name: node:16.13.0
+  entrypoint: npm
+  args: ["install"]
+- name: node:16.13.0
+  entrypoint: node
+  args: ["server.js"]
