@@ -3,5 +3,8 @@ steps:
   entrypoint: npm
   args: ["install"]
 - name: node:16.13.0
-  entrypoint: node
-  args: ["server.js"]
+  entrypoint: npm
+  args: ["server"]
+- name: node:16.13.0
+  entrypoint: npm
+  args: ['run', 'build']
