@@ -2,9 +2,9 @@ steps:
 - name: node:16.13.0
   entrypoint: npm
   args: ["install"]
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ["app", "deploy", "api.yaml", "-v", "$_GAE_VERSION"]  
 - name: node:16.13.0
   entrypoint: node
   args: ["server"]
-- name: "gcr.io/cloud-builders/gcloud"
-  args: ["app", "deploy", "api.yaml", "-v", "$_GAE_VERSION"]
 timeout: "1600s"
