@@ -7,6 +7,6 @@ app.use(cors())
 app.use(express.json())
 app.use(require('./routes.js'))
 
-app.listen(3000, () => {
+app.listen(443, () => {
   console.log('Server running on 3000 port')
 })
